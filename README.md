@@ -1,34 +1,57 @@
-# Mobile CRM AI App
+# AI Fashion CRM Dashboard
 
-A modern, AI-powered CRM dashboard for fashion e-commerce brands built with React Native (Expo) and Node.js.
+A premium, AI-powered CRM dashboard built for fashion e-commerce brands. This application features dynamic data analytics, localized currency formatting (₹), customer tracking, inventory data visualization, and an interactive AI prescriptive assistant.
 
-## Features
-- **Dashboard**: High-level KPI tracking (revenue, customers, risk).
-- **Customers**: List view, search, and intelligent filtering of WooCommerce-style data.
-- **AI Insights**: Churn risk prediction and proactive business recommendations.
-- **AI Assistant**: Conversational UI to query business data (e.g., "Show risky customers").
-- **Dark Mode UI**: Clean, minimalistic, sleek SaaS design.
+## Tech Stack
 
-## Project Structure
-- `/backend`: Node.js + Express API providing mock data and static rule-based AI recommendations.
-- `/mobile`: React Native (Expo) app handling all UI/UX.
+- **Frontend**: React.js (Vite), React Router DOM, Recharts, Lucide Icons, Pure CSS (Glassmorphism UI)
+- **Backend**: Node.js, Express, RESTful APIs
 
-## How to Run
+---
 
-### 1. Start Backend
+## Getting Started
+
+To run the application locally, you'll need to run both the **backend** and the **frontend** servers simultaneously in two separate terminal windows.
+
+### Prerequisites
+- Node.js installed on your machine.
+
+### 1. Start the Backend API Server
+The backend provides the mock mock-data and REST endpoints for the dashboard, customers, and product catalogs.
+
 ```bash
+# Navigate to the backend directory
 cd backend
+
+# Install dependencies
 npm install
+
+# Start the server
 node server.js
 ```
-The backend will run on `http://localhost:3000`.
+*The backend server will run on `http://localhost:3000`.*
 
-### 2. Start Mobile App
+### 2. Start the Frontend Application
+Open a **new terminal window** and run the following commands to start the React web UI.
+
 ```bash
-cd mobile
-npm install
-npx expo start
-```
-Press `w` to run on web, or use the Expo app on your phone to scan the QR code.
+# Navigate to the frontend directory
+cd frontend
 
-Note: By default `services/api.js` connects to `10.0.2.2:3000` (Android emulator) or `localhost:3000` (Web/iOS). Adjust if testing on physical devices.
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
+```
+*The frontend application will run on `http://localhost:5173` (or the port specified in your terminal output).*
+
+---
+
+## Features
+
+- **Store Dashboard**: High-level KPIs, Revenue Analytics matching, Traffic Sources tracking, and automated AI insight generation.
+- **Customer Directory**: Track Churn Risk, overall LTV (Lifetime Value), and add new customer entries directly to the directory. Includes a dedicated customer profile page.
+- **Product Operations**: Interactive time-series performance charts tracking units sold against total revenue. Instantly add new products or search active inventory.
+- **AI Integration**: A sleek AI Chat panel integrated directly into the navbar providing automated win-back campaign strategies.
+- **Data Exporting**: Export structured Data URI JSON and CSV reports out of any data table on the platform.
